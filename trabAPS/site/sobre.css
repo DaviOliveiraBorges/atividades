@@ -1,0 +1,83 @@
+.sobre .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.sobre h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c6909;
+}
+
+.sobre h2 {
+    font-size: 2em;
+    margin-top: 30px;
+    color: #000000;
+}
+
+.sobre p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.sobre ul {
+    list-style: none;
+    padding-left: 20px;
+    border: 1px solid #aea3a3;
+    padding-top: 3px; 
+}
+
+.sobre ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.imagem-curso img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.lista-aprendizado ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.inclui-curso ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.testemunhos {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.testemunho {
+    background-color: #f9f9f9;  
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+button#inscrever {
+    background-color: #157a13 ;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+button#inscrever:hover {
+    background-color: #2c6909;
+}

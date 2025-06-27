@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetShop - Promoções Especiais</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p1/8128660-cao-com-um-gato-no-coracao-das-patas-vetor.jpg');
+      background-size: 150px;
+      background-repeat: repeat;
+      background-color: #420303f9;
+    }
+
+    header {
+      background-color: #071f37;
+      background-size: 30px;
+      background-repeat: repeat;
+      color: rgb(116, 54, 93);
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      color: #ffffff;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      padding: 20px;
+    }
+
+    .produto {
+      background-color: white;
+      border: 2px solid #ff6f61;
+      border-radius: 10px;
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .produto:hover {
+      transform: scale(1.05);
+    }
+
+    .produto img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .preco {
+      font-size: 18px;
+      color: #314b91;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .preco-original {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    .botao-comprar {
+      background-color: #3e5fb3;
+      color: rgb(168, 196, 241);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .botao-comprar:hover {
+      background-color: #28327b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f2f2f2;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🐶 PetShop ZenPet 🐱</h1>
+    <p>Confira nossas promoções especiais para o seu pet!</p>
+  </header>
+
+  <section class="produtos">
+
+    <!-- Produto 1 -->
+    <div class="produto">
+      <img src="https://www.petlove.com.br/images/products/283929/product/TRATADA_0006_7898746060142.jpg?1719856385" alt="Kit Banho D'Amazon Petcare">
+      <h3>Kit Banho Petcare</h3>
+      <p>Shampoo, condicionador e deo colônia para cães.</p>
+      <div class="preco">
+        <span class="preco-original">R$ 200,00</span> R$ 159,90
+      </div>
+      <a href="https://www.petlove.com.br/images/products/283929/product/TRATADA_0006_7898746060142.jpg?1719856385" class="botao-comprar" target="_blank">Comprar</a>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="produto">
+      <img src="https://cobasi.vteximg.com.br/arquivos/ids/1056465-1000-1000/Shampoo-Banho-de-Gato-Procao-500ml-para-gatos.png?v=638733302860730000" alt="Shampoo Banho de Gato">
+      <h3>Shampoo Banho de Gato 500ml</h3>
+      <p>Desenvolvido especialmente para a pele sensível de gatos.</p>
+      <div class="preco">
+        <span class="preco-original">R$ 130,00</span> R$ 99,90
+      </div>
+      <a href="https://cobasi.vteximg.com.br/arquivos/ids/1056465-1000-1000/Shampoo-Banho-de-Gato-Procao-500ml-para-gatos.png?v=638733302860730000" class="botao-comprar" target="_blank">Comprar</a>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="produto">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_2X_651965-MLB82857979548_032025-F-condicionador-500ml-para-pet-ces-e-gatos-fortalece-brilho.webp" alt="Condicionador para Cães e Gatos">
+      <h3>Condicionador para Cães e Gatos 500ml</h3>
+      <p>Proporciona maciez, brilho e perfume agradável ao pelo.</p>
+      <div class="preco">
+        <span class="preco-original">R$ 149,90</span> R$ 109,90
+      </div>
+      <a href="https://http2.mlstatic.com/D_NQ_NP_2X_651965-MLB82857979548_032025-F-condicionador-500ml-para-pet-ces-e-gatos-fortalece-brilho.webp" class="botao-comprar" target="_blank">Comprar</a>
+    </div>
+
+    <!-- Produto 4 -->
+    <div class="produto">
+      <img src="https://images-americanas.b2w.io/produtos/44370021/imagens/kit-com-5-ossos-ossinho-brinquedo-para-pet-cachorro/44370021_1_xlarge.jpg" alt="Brinquedo Interativo para Gato">
+      <h3>Brinquedo Mordedor para Cães</h3>
+      <p>Arranhador com brinquedos interativos para gatos.</p>
+      <div class="preco">
+        <span class="preco-original">R$ 189,90</span> R$ 127,00
+      </div>
+      <a href="https://images-americanas.b2w.io/produtos/44370021/imagens/kit-com-5-ossos-ossinho-brinquedo-para-pet-cachorro/44370021_1_xlarge.jpg" class="botao-comprar" target="_blank">Comprar</a>
+    </div>
+
+    <!-- Produto 5 -->
+    <div class="produto">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_2X_806825-MLA81183725091_122024-F.webp" alt="Kit Brinquedos para Gatos 4 Peças">
+      <h3>Kit Brinquedos para Gatos com 7 Peças</h3>
+      <p>Kit com variedade de brinquedos para entreter seu gatinho.</p>
+      <div class="preco">
+        <span class="preco-original">R$ 99,90</span> R$ 79,90
+      </div>
+      <a href="https://http2.mlstatic.com/D_NQ_NP_2X_806825-MLA81183725091_122024-F.webp" class="botao-comprar" target="_blank">Comprar</a>
+    </div>
+    <!-- Produto 6 -->
+<div class="produto">
+    <img src="https://www.petlove.com.br/images/products/266121/product/Ra%C3%A7%C3%A3o_Seca_PremieR_Pet_Golden_Sele%C3%A7%C3%A3o_Natural_para_C%C3%A3es_Adultos_-_12_Kg_2724379_1.jpg?1674082491" alt="Ração Golden Seleção Natural Cães Adultos">
+    <h3>Ração Golden Seleção Natural 12kg</h3>
+    <p>Ração premium especial para cães adultos, sabor frango e arroz.</p>
+    <div class="preco">
+      <span class="preco-original">R$ 259,90</span> R$ 199,90
+    </div>
+    <a href="https://www.petlove.com.br/images/products/266121/product/Ra%C3%A7%C3%A3o_Seca_PremieR_Pet_Golden_Sele%C3%A7%C3%A3o_Natural_para_C%C3%A3es_Adultos_-_12_Kg_2724379_1.jpg?1674082491" alt="Ração Golden Seleção Natural Cães Adultos" class="botao-comprar" target="_blank">Comprar</a>
+  </div>
+  
+  <!-- Produto 7 -->
+  <div class="produto">
+    <img src="https://a-static.mlcdn.com.br/800x560/racao-para-gato-whiskas-premium-carne-com-delicrocs-101kg/efacil/716020/2c5a30eb62d3e32e75607cbc1a05a0ac.jpeg">
+    <h3>Ração Whiskas Adultos 10kg</h3>
+    <p>Ração equilibrada para gatos adultos, sabor carne.</p>
+    <div class="preco">
+      <span class="preco-original">R$ 179,90</span> R$ 139,90
+    </div>
+    <a href="https://a-static.mlcdn.com.br/800x560/racao-para-gato-whiskas-premium-carne-com-delicrocs-101kg/efacil/716020/2c5a30eb62d3e32e75607cbc1a05a0ac.jpeg" class="botao-comprar" target="_blank">Comprar</a>
+  </div>
+  
+  <!-- Produto 8 -->
+  <div class="produto">
+    <img src="https://a-static.mlcdn.com.br/1500x1500/coleira-guia-retratil-led-5m-para-pet-cachorro-gato-trela-ajustavel-passeio-conforto-seguranca-v2beh/v2beh/10408-s-estampa-femea/ea3d8ef2104682f1e3c836bef40747e8.jpeg" alt="Coleira Peitoral com Guia para Pets">
+    <h3> Guia para Cães e Gatos</h3>
+    <p>Conjunto confortável e ajustável para passeios com segurança.</p>
+    <div class="preco">
+      <span class="preco-original">R$ 157,49</span> R$ 102,36
+    </div>
+    <a href="https://a-static.mlcdn.com.br/1500x1500/coleira-guia-retratil-led-5m-para-pet-cachorro-gato-trela-ajustavel-passeio-conforto-seguranca-v2beh/v2beh/10408-s-estampa-femea/ea3d8ef2104682f1e3c836bef40747e8.jpeg" class="botao-comprar" target="_blank">Comprar</a>
+  </div>
+
+  </section>
+
+  <footer>
+    © 2025 PetShop Alegria Animal. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

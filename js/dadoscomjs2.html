@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>calculos js</h1>
+    <button onclick="calcular()"> Clique para calcular</button>
+    <section id="result">
+        <p>o resultado aparece aq</p>
+    </section>
+    <script> 
+    function calcular(){
+        let num = Number(window.prompt("Digite um numero"))
+        let res = document.querySelector("section#result")
+        res.innerHTML = `<p> O numero a ser analisado sera o <strong> ${num}</strong> </p><hr>`
+        res.innerHTML += `<p> o seu valor absoluto é <strong> ${Math.abs(num)}</strong> </p>`
+        res.innerHTML += `<p> a sua parte inteira é <strong> ${Math.trunc(num)}</strong> </p>`
+        res.innerHTML += `<p> a parte inteira mais proxima é <strong> ${Math.round(num)}</stron> </p>`
+        res.innerHTML += `<p> a sua raiz quadrada <strong> ${Math.sqrt(num)}</strong> </p>`
+        res.innerHTML += `<p> a sua raiz cubica <strong> ${Math.cbrt(num)}</strong> </p>`
+        res.innerHTML += `<p> O valor de ${num} <sup2></sup> <strong> ${Math.pow(num, 2)}</strong> </p>`
+        res.innerHTML += `<p> O valor de ${num} <sup3></sup> <strong> ${Math.pow(num, 3)}</strong> </p>`
+    }
+    </script>
+</body>
+</html>

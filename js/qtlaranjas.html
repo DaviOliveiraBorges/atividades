@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA JAVASCRIPT</title>
+</head>
+<body>
+    <h1>AULA JAVASCRIPT</h1>
+    <p>AULA JAVASCRIPT</p>
+    <script>
+        let board = [['T','C','B','Q','K','B','C','T'],
+                    ['P','P','P','P','P','P','P','P'],
+                    [' ',' ',' ',' ',' ',' ',' ',' '],
+                    [' ',' ',' ',' ',' ',' ',' ',' '],
+                    [' ',' ',' ',' ',' ',' ',' ',' '],
+                    [' ',' ',' ',' ',' ',' ',' ',' '],
+                    ['p','p','p','p','p','p','p','p'],
+                    ['t','c','b','q','k','b','c','t']];
+                    console.log(board.join('\n'))
+                    console.log("\n\n Fazendo o peão avançar")
+                    board[4][4] = board[6][4]
+                    board[6][4] = ' '
+                    console.log(board.join('\n'))
+
+
+        </script>
+</body>
+</html>

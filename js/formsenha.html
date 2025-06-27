@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script>
+        function testa_senha(){
+            var p1 = document.forms["formsenha"]["senha"].value
+            var p2 = document.forms["formsenha"]["senha_conf"].value
+            if(document.forms["formsenha"]["senha"].value.lenght < 6)
+            {
+                alert("mt pequeno")
+            }
+            if(p1 != p2)
+            {
+                alert("senhas diferentes")
+                return false
+            }
+        }
+    </Script>
+</head>
+<body>
+    <h1>sistema academico</h1>
+    <form name="formsenha" action="" onsubmit="return testa_senha()" method="post">
+        senha: <input type="password" name="senha"> <br>
+        confirmar senha: <input type="password" name="senha_conf"> <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

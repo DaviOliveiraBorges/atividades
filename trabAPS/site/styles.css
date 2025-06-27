@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2c6909;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    min-height: 80px; 
+}
+
+header .logo img {
+    max-height: 150px;
+    width: auto; 
+    border-radius: 10%;  
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.sidebar-esquerda,
+.sidebar-direita {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 0 10px;
+}
+
+.main {
+    flex: 3;
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.main h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.main p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#inscrever {
+    background-color: #157a13;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#inscrever:hover {
+    background-color: #136412;
+}
+
+.imagem-curso img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+}
+
+.anuncio {
+    margin-bottom: 20px;
+}
+
+.anuncio img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c6909;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1em;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cadastro_usuario() {
+            var nome = document.forms["formusuario"]["nome"].value;
+            var cpf = document.forms["formusuario"]["cpf"].value;
+            var data_nasc = document.forms["formusuario"]["data_nasc"].value;
+            var email = document.forms["formusuario"]["email"].value;
+            var telefone = document.forms["formusuario"]["telefone"].value;
+            var senha = document.forms["formusuario"]["senha"].value;
+            var senha_conf = document.forms["formusuario"]["senha_conf"].value;
+
+            if (nome == null || cpf == null || cpf == ' ' || data_nasc == null || data_nasc == '' || email == null || email == ""
+                || telefone == null || telefone == "" || senha == null || senha == "" || senha_conf == null || senha_conf == "") {
+                alert("Todas as informações devem ser preenchidas");
+                return false;
+            }
+
+            var arrobapos = email.indexOf("@");
+            if (arrobapos < 1) {
+                alert("email errado");
+                return false;
+            }
+
+            if (cpf.length < 11) {
+                alert("cpf inválido");
+                return false;
+            }
+
+            if (senha.length < 6) {
+                alert("senha muito pequena");
+                return false;
+            }
+
+            if (senha !== senha_conf) {
+                alert("senhas diferentes");
+                return false;
+            }
+
+            alert("Cadastro realizado");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="formusuario" onsubmit="return cadastro_usuario()">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="cpf">CPF:</label><br>
+        <input type="number" id="cpf" name="cpf"><br><br>
+
+        <label for="data_nasc">Data de Nascimento:</label><br>
+        <input type="date" id="data_nasc" name="data_nasc"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="number" id="telefone" name="telefone"><br><br>
+
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha"><br><br>
+
+        <label for="senha_conf">Confirmar Senha:</label><br>
+        <input type="password" id="senha_conf" name="senha_conf"><br><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>

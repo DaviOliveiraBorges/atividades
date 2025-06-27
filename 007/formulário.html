@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Banho e Tosa ZenPet</title>
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Mascara de Input (imask.js) -->
+  <script src="https://unpkg.com/imask"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://static.vecteezy.com/ti/vetor-gratis/p1/8128660-cao-com-um-gato-no-coracao-das-patas-vetor.jpg') repeat;
+      background-size: 80px;
+      padding: 30px;
+      margin: 0;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .container {
+      background: #ffffffdd;
+      border-radius: 20px;
+      padding: 30px 40px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 25px #ccc;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff69b4;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #555;
+      font-weight: 600;
+      font-size: 17px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #87cefa;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      background: #f0f8ff;
+      transition: all 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: #ff69b4;
+      background-color: #ffffff;
+      outline: none;
+    }
+
+    .endereco, #campo-raca {
+      background-color: #ffe4f1;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .endereco h3 {
+      margin-top: 0;
+      color: #d63384;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #87cefa;
+      color: #fff;
+      font-size: 18px;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #63b0dc;
+    }
+
+    .voltar-btn {
+      background-color: #ff69b4;
+      margin-top: 10px;
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .voltar-btn:hover {
+      background-color: #e158a0;
+    }
+
+    .thank-you-message {
+      text-align: center;
+      color: #ff69b4;
+      font-size: 26px;
+      margin-top: 30px;
+      animation: fadeIn 1s ease;
+    }
+
+    .palavra-chave {
+      font-weight: bold;
+      color: green;
+      font-size: 22px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Banho e Tosa ZenPet</h1>
+
+  <div class="form-container" id="form-container">
+    <form id="form-banho-tosa">
+      <label for="nome_dono">🐾 Nome do Dono:</label>
+      <input type="text" id="nome_dono" name="nome_dono">
+
+      <label for="contato_dono">📞 Contato (WhatsApp ou telefone):</label>
+      <input type="tel" id="contato_dono" name="contato_dono">
+
+      <label for="nome_animal">🐶🐱 Nome do Animal:</label>
+      <input type="text" id="nome_animal" name="nome_animal">
+
+      <label for="tipo_animal">🐾 Tipo de Animal:</label>
+      <select id="tipo_animal" name="tipo_animal" onchange="toggleRaca()">
+        <option value="">Selecione</option>
+        <option value="cachorro">Cachorro</option>
+        <option value="gato">Gato</option>
+        <option value="ambos">Ambos</option>
+      </select>
+
+      <div id="campo-raca">
+        <label for="raca">📋 Raça:</label>
+        <input type="text" id="raca" name="raca">
+      </div>
+
+      <label for="servico">🧼 Tipo de Serviço:</label>
+      <select id="servico" name="servico">
+        <option value="">Selecione</option>
+        <option value="banho">Banho</option>
+        <option value="tosa">Tosa</option>
+        <option value="ambos">Banho e Tosa</option>
+      </select>
+
+      <label for="transporte">🚗 Transporte:</label>
+      <select id="transporte" name="transporte" onchange="toggleEndereco()">
+        <option value="">Selecione</option>
+        <option value="traz_busca">Eu levo e busco no petshop</option>
+        <option value="buscar_levar">Quero que busquem e entreguem em casa</option>
+      </select>
+
+      <div class="endereco" id="endereco">
+        <h3>🏠 Endereço de Retirada e Entrega</h3>
+
+        <label for="cep">📍 CEP:</label>
+        <input type="text" id="cep" name="cep">
+
+        <label for="rua">🛣️ Rua:</label>
+        <input type="text" id="rua" name="rua">
+
+        <label for="bairro">🏘️ Bairro:</label>
+        <input type="text" id="bairro" name="bairro">
+
+        <label for="numero">🔢 Número:</label>
+        <input type="text" id="numero" name="numero">
+
+        <label for="tipo_local">🏡 Tipo de Local:</label>
+        <select id="tipo_local" name="tipo_local">
+          <option value="">Selecione</option>
+          <option value="casa">Casa</option>
+          <option value="apartamento">Apartamento</option>
+          <option value="condominio">Condomínio</option>
+          <option value="servico">Serviço</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="validarFormulario()">Agendar Agora 🐾</button>
+      <button type="reset" style="background-color: #f08080; margin-top: 10px;">Limpar Campos</button>
+    </form>
+  </div>
+
+  <div class="thank-you-container" id="thank-you-container" style="display:none;">
+    <div class="thank-you-message">
+      <p>🎉 Agradecemos por escolher o ZenPet!</p>
+      <p id="palavra-chave" class="palavra-chave"></p>
+      <a href="#form-container" class="voltar-btn" onclick="goBack()">Voltar ao início</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleEndereco() {
+    const transporte = document.getElementById("transporte").value;
+    document.getElementById("endereco").style.display = transporte === "buscar_levar" ? "block" : "none";
+  }
+
+  function toggleRaca() {
+    const tipoAnimal = document.getElementById("tipo_animal").value;
+    const campoRaca = document.getElementById("campo-raca");
+    campoRaca.style.display = (tipoAnimal === "gato") ? "none" : "block";
+  }
+
+  function gerarPalavraChave() {
+    const palavras = ["Amizade", "Felicidade", "Coração", "Lealdade", "Aventura", "Companhia", "Sorrisos", "Alegria", "Proteção", "Confiança"];
+    return palavras[Math.floor(Math.random() * palavras.length)];
+  }
+
+  function showThankYouMessage() {
+    document.getElementById("form-container").style.display = "none";
+    document.getElementById("thank-you-container").style.display = "block";
+    document.getElementById("palavra-chave").innerText = "Palavra-chave da entrega: " + gerarPalavraChave();
+  }
+
+  function goBack() {
+    document.getElementById("thank-you-container").style.display = "none";
+    document.getElementById("form-container").style.display = "block";
+  }
+
+  function validarFormulario() {
+    const requiredFields = ["nome_dono", "contato_dono", "nome_animal", "tipo_animal", "servico", "transporte"];
+    for (let field of requiredFields) {
+      if (!document.getElementById(field).value.trim()) {
+        Swal.fire('Ops!', 'Por favor, preencha todos os campos obrigatórios.', 'warning');
+        return;
+      }
+    }
+
+    if (document.getElementById("tipo_animal").value !== "gato" && !document.getElementById("raca").value.trim()) {
+      Swal.fire('Raça obrigatória!', 'Informe a raça do seu animalzinho.', 'warning');
+      return;
+    }
+
+    if (document.getElementById("transporte").value === "buscar_levar") {
+      const enderecoFields = ["cep", "rua", "bairro", "numero", "tipo_local"];
+      for (let field of enderecoFields) {
+        if (!document.getElementById(field).value.trim()) {
+          Swal.fire('Endereço incompleto!', 'Por favor, preencha todos os campos de endereço.', 'warning');
+          return;
+        }
+      }
+    }
+
+    showThankYouMessage();
+  }
+
+  // Máscara de telefone
+  IMask(document.getElementById('contato_dono'), { mask: '(00) 00000-0000' });
+
+  // Máscara de CEP
+  IMask(document.getElementById('cep'), { mask: '00000-000' });
+</script>
+
+</body>
+</html>

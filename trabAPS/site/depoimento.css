@@ -1,0 +1,106 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: #2c6909;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+.depoimentos .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.depoimentos h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c6909;
+}
+
+.depoimentos p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.depoimento {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.depoimento-img {
+    flex: 0 0 120px;
+    margin-right: 20px;
+}
+
+.depoimento-img img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 120px;
+}
+
+.depoimento-texto {
+    max-width: 600px;
+}
+
+.depoimento-texto p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c6909;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1em;
+}

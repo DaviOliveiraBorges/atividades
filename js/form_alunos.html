@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function testa_form(){
+            var n = document.forms["formalunos"]["nome_aluno"].value
+            var m = document.forms["formalunos"]["matricula"].value
+            if (m == null || m == ''){
+                alert("o numero de matricula tem q ser informadp")
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>sistema academico</h1>
+    <form name="formalunos" action="" onsubmit="return testa_form()" method="post">
+        matricula: <input type="text" name="matricula"> <br>
+        nome <input type="text" name="nome_aluno"> <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
